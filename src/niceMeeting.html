@@ -11,32 +11,33 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="niceMeeting.css" />
-        <script src="./js/Questions.js"></script>
+        <script type="module" src="./js/Questions.js" async="false"></script>
+        <script type="module" src="./js/currentQuestion.js" async="false"></script>
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="questionScreen">
             <div class="container-wrapper">
                 <div class="img-wrapper content-wrapper">
                     <img src="/images/peachcat-cat.gif" alt="img" />
                 </div>
 
                 <div class="text-wrapper content-wrapper">
-                    <p class="text-question">sometext</p>
+                    <p class="text-question" id="qText">sometext</p>
                 </div>
 
                 <div class="btns-wrapper content-wrapper">
                     <div class="btn-block">
-                        <button class="btn" type="button">Da</button>
+                        <button class="btn" type="button" id="yesBtn">Da</button>
                     </div>
 
                     <div class="btn-block">
-                        <button class="btn btn-wrong" type="button">No</button>
+                        <button class="btn btn-wrong" type="button" id="noBtn">No</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="final-screen container hidden">
+        <div class="final-screen container hidden" id="finalScreen">
             <div class="container-wrapper">
                 <div class="img-wrapper content-wrapper">
                     <img src="/images/peachcat-cat.gif" alt="img" />
