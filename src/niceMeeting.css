@@ -4,6 +4,8 @@
     --color-pink: #f26389;
     --color-green-mid: #384001;
     --color-green-dark: #222601;
+    --font-main: "Pacifico", cursive;
+    --font-btn: "Marck Script", cursive;
 }
 
 * {
