@@ -17,7 +17,7 @@ export const questions = [
         id: 3,
         text: "Так что... ты согласна(-ен) сходить со мной на свидание?",
         btnYes: "Да, очень хочу!",
-        btnNo: "Может в следующий раз",
+        btnNo: "В другой раз",
         gif: '/images/mochi-mochimochi.gif'
     },
     {

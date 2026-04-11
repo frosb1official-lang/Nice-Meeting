@@ -26,9 +26,9 @@ body {
 }
 
 .container-wrapper {
-    outline: 1px solid red;
-    width: 50vw;
-    height: 65vh;
+    /* outline: 1px solid red; */
+    width: 70vw;
+    height: 75vh;
     display: flex;
     flex-direction: column;
 }
@@ -40,17 +40,54 @@ body {
 }
 
 .img-wrapper {
-    outline: 1px solid blue;
-    margin-bottom: 150px;
+    /* outline: 1px solid blue; */
+    margin-bottom: 50px;
 }
 
 .text-wrapper {
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
     margin-bottom: 150px;
 }
 
 .btns-wrapper {
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
+    gap: 125px;
+}
+
+#questionGif {
+    height: 250px;
+}
+
+.text-question {
+    font-family: var(--font-main);
+    font-size: 36px;
+}
+
+.btn {
+    height: 60px;
+    width: 200px;
+    text-decoration: none;
+    background-color: var(--color-pink-dark);
+    color: var(--color-pink-light);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: var(--font-btn);
+    cursor: pointer;
+    border: solid 3px;
+    border-radius: 10px;
+    border-color: #f26389;
+    box-shadow: 5px 5px 0px var(--color-pink);
+}
+
+.btn:active {
+    transform: translate(3px, 3px);
+    transition-duration: 0.05s;
+    box-shadow: 5px 5px 0px var(--color-pink);
+}
+
+.btn:hover {
+    background-color: var(--color-pink-light);
+    color: var(--color-pink);
 }
 
 .hidden {
