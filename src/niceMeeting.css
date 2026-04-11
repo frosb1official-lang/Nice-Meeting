@@ -60,7 +60,9 @@ body {
 
 .text-question {
     font-family: var(--font-main);
-    font-size: 36px;
+    font-size: 40px;
+    text-align: center;
+    color: var(--color-pink);
 }
 
 .btn {
