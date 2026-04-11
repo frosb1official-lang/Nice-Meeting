@@ -9,14 +9,14 @@ const questionGif = document.getElementById('questionGif')
 let currentQuestion = 0;
 
 function renderQuestion() {
-
+    
     if (currentQuestion >= questions.length) {
         showFinalScreen();
         return;
     }
-
-    let q = questions[currentQuestion];
-
+    
+    const q = questions[currentQuestion];
+    
     qText.textContent = q.text;
     yesBtn.textContent = q.btnYes;
     noBtn.textContent = q.btnNo;
@@ -29,10 +29,14 @@ yesBtn.addEventListener('click', () => {
 })
 
 function showFinalScreen() {
-    yesBtn.addEventListener('click', () => {
-        questionScreen.classList.add('hidden')
-        finalScreen.classList.remove('hidden')
-    })
+    let currentQuestion = 4;
+    const q = questions[currentQuestion];
+
+    questionScreen.classList.add('hidden')
+    finalScreen.classList.remove('hidden')
+
+    qText.textContent = q.text;
+    questionGif.src = q.gif
 }
 
 renderQuestion()

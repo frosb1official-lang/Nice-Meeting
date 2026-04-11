@@ -19,5 +19,10 @@ export const questions = [
         btnYes: "Да, очень хочу!",
         btnNo: "Может в следующий раз",
         gif: '/images/mochi-mochimochi.gif'
+    },
+    {
+        id: 4,
+        text: "Супер, я в полной боевой готовности к встрече с тобой!",
+        gif: '/images/mochi-final-screen.gif'
     }
 ];
