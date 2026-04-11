@@ -10,7 +10,7 @@ let currentQuestion = 0;
 
 function renderQuestion() {
     
-    if (currentQuestion >= questions.length) {
+    if (currentQuestion >= questions.length - 1) {
         showFinalScreen();
         return;
     }
@@ -29,14 +29,8 @@ yesBtn.addEventListener('click', () => {
 })
 
 function showFinalScreen() {
-    let currentQuestion = 4;
-    const q = questions[currentQuestion];
-
     questionScreen.classList.add('hidden')
     finalScreen.classList.remove('hidden')
-
-    qText.textContent = q.text;
-    questionGif.src = q.gif
 }
 
 renderQuestion()
