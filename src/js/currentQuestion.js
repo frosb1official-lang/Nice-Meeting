@@ -4,6 +4,7 @@ const finalScreen = document.getElementById("finalScreen");
 const qText = document.getElementById('qText')
 const yesBtn = document.getElementById('yesBtn')
 const noBtn = document.getElementById('noBtn')
+const questionGif = document.getElementById('questionGif')
 
 let currentQuestion = 0;
 
@@ -19,6 +20,7 @@ function renderQuestion() {
     qText.textContent = q.text;
     yesBtn.textContent = q.btnYes;
     noBtn.textContent = q.btnNo;
+    questionGif.src = q.gif
 }
 
 yesBtn.addEventListener('click', () => {
