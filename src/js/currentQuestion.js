@@ -8,13 +8,21 @@ const questionGif = document.getElementById('questionGif')
 
 let currentQuestion = 0;
 
+function resetNoBtn() {
+    noBtn.style.left = '';
+    noBtn.style.top = '';
+    noBtn.style.position = '';
+}
+
 function renderQuestion() {
     
     if (currentQuestion >= questions.length - 1) {
         showFinalScreen();
         return;
     }
-    
+
+    resetNoBtn()
+
     const q = questions[currentQuestion];
     
     qText.textContent = q.text;
@@ -34,3 +42,4 @@ function showFinalScreen() {
 }
 
 renderQuestion()
+resetNoBtn()
