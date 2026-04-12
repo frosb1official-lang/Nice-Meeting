@@ -12,7 +12,12 @@
         />
         <link rel="stylesheet" href="niceMeeting.css" />
         <script type="module" src="./js/Questions.js" async="false"></script>
-        <script type="module" src="./js/currentQuestion.js" async="false"></script>
+        <script
+            type="module"
+            src="./js/currentQuestion.js"
+            async="false"
+        ></script>
+        <script src="./js/noBtnMove.js" async="false"></script>
     </head>
     <body>
         <div class="container" id="questionScreen">
@@ -27,11 +32,12 @@
 
                 <div class="btns-wrapper content-wrapper">
                     <div class="btn-block">
-                        <button class="btn" type="button" id="yesBtn"></button>
+                        <button class="btn" type="button" id="yesBtn">Да</button>
                     </div>
-
                     <div class="btn-block">
-                        <button class="btn btn-wrong" type="button" id="noBtn"></button>
+                        <button class="btn btn-wrong" type="button" id="noBtn">
+                        Нет
+                    </button>
                     </div>
                 </div>
             </div>
@@ -40,11 +46,17 @@
         <div class="final-screen container hidden" id="finalScreen">
             <div class="container-wrapper">
                 <div class="img-wrapper content-wrapper">
-                    <img src="/images/mochi-final-screen.gif" alt="img" id="questionGif"/>
+                    <img
+                        src="/images/mochi-final-screen.gif"
+                        alt="img"
+                        id="questionGif"
+                    />
                 </div>
 
                 <div class="text-wrapper content-wrapper">
-                    <p class="text-question" id="qText">Супер, я в полной боевой готовности к встрече с тобой!</p>
+                    <p class="text-question" id="qText">
+                        Супер, я в полной боевой готовности к встрече с тобой!
+                    </p>
                 </div>
             </div>
         </div>
