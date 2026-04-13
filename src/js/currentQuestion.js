@@ -41,5 +41,9 @@ function showFinalScreen() {
     finalScreen.classList.remove('hidden')
 }
 
+window.addEventListener('contextmenu', (e) => {
+    e.defaultPrevented();
+}, false);
+
 renderQuestion()
 resetNoBtn()
