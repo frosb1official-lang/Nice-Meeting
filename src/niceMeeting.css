@@ -11,6 +11,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,6 +60,7 @@ body {
 
 .text-question {
     font-family: var(--font-main);
+    font-size: clamp(28px, 6vw, 42px);
     font-size: 40px;
     text-align: center;
     color: var(--color-pink);
@@ -104,4 +106,54 @@ body {
 
 .hidden {
     display: none;
+}
+
+/* Планшеты (горизонтальная ориентация) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-wrapper {
+        max-width: 480px;
+        min-height: 80dvh;
+    }
+
+    #questionGif {
+        max-height: 280px;
+    }
+
+    .btns-wrapper {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btns-wrapper{
+        gap: 5px;
+    }
+
+    .btn {
+        width: 150px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    #questionGif {
+        max-height: 180px;
+    }
+}
+
+/* Маленькие мобильные (ниже 400px) */
+@media (max-width: 400px) {
+    .btns-wrapper {
+        gap: 30px;
+    }
+
+    .text-question {
+        font-size: clamp(26px, 7vw, 36px);
+    }
+}
+
+/* Очень высокие экраны (например iPhone 16 Pro Max) */
+@media (min-height: 900px) {
+    .container-wrapper {
+        min-height: 78dvh;
+    }
 }
