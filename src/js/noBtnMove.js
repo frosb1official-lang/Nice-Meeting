@@ -1,7 +1,10 @@
 
-const noBtn = document.getElementById("noBtn");
+const noBtn = document.getElementById('noBtn');
 
-noBtn.addEventListener("mouseenter", () => {
+noBtn.addEventListener('mouseenter', mouseEvent);
+noBtn.addEventListener('click', mouseEvent);
+
+function mouseEvent() {
     noBtn.style.position = 'absolute'
     const container = document.getElementById('questionScreen')
 
@@ -19,4 +22,4 @@ noBtn.addEventListener("mouseenter", () => {
 
     noBtn.style.left = randomX + 'px'
     noBtn.style.top = randomY + 'px'
-});
+}
