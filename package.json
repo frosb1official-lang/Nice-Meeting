@@ -1,21 +1,13 @@
 {
-  "name": "nice-meeting",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "nicemeeting",
+  "private": true,
+  "version": "0.1.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/frosb1official-lang/Nice-Meeting.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/frosb1official-lang/Nice-Meeting/issues"
-  },
-  "homepage": "https://github.com/frosb1official-lang/Nice-Meeting#readme"
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  }
 }
