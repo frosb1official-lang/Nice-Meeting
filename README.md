@@ -20,7 +20,7 @@
 git clone https://github.com/твой-username/nicemeeting.git
 
 # Перейти в папку проекта
-cd nicemeeting
+cd /your path/nicemeeting
 ```
 
 Для запуска приложения локально:
