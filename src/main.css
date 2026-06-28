@@ -30,6 +30,8 @@ body {
 }
 
 .container-wrapper {
+    position: relative;
+    overflow: hidden;
     width: 50vw;
     height: 75vh;
     display: flex;
@@ -51,7 +53,7 @@ body {
 }
 
 .text-wrapper {
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 .btns-wrapper {
@@ -89,7 +91,6 @@ body {
 }
 
 .btn-block {
-    position: relative;
     height: 60px;
     width: 200px;
 }
