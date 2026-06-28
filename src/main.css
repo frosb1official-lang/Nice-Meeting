@@ -30,10 +30,14 @@ body {
 }
 
 .container-wrapper {
-    width: 70vw;
+    width: 50vw;
     height: 75vh;
     display: flex;
     flex-direction: column;
+    border: 2px solid var(--color-pink-dark);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(242, 99, 137, 0.18);
+    padding: 24px;
 }
 
 .content-wrapper {
@@ -85,8 +89,13 @@ body {
 }
 
 .btn-block {
+    position: relative;
     height: 60px;
     width: 200px;
+}
+
+.btn-wrong {
+    position: relative;
 }
 
 .btn-wrong.moving {
@@ -118,16 +127,9 @@ body {
     #questionGif {
         max-height: 280px;
     }
-
-    .btns-wrapper {
-        gap: 30px;
-    }
 }
 
 @media (max-width: 768px) {
-    .btns-wrapper{
-        gap: 5px;
-    }
 
     .btn {
         width: 150px;
@@ -142,9 +144,6 @@ body {
 
 /* Маленькие мобильные (ниже 400px) */
 @media (max-width: 400px) {
-    .btns-wrapper {
-        gap: 30px;
-    }
 
     .text-question {
         font-size: clamp(26px, 7vw, 36px);
