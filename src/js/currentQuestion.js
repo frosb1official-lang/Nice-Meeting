@@ -67,6 +67,11 @@ submitDateBtn.addEventListener('click', () => {
 })
 
 function showFinalScreen() {
+    const finalQ = questions[questions.length - 1];
+    const finalText = document.getElementById('finalText');
+    const finalGif = document.getElementById('finalGif');
+    finalText.textContent = finalQ.text;
+    finalGif.src = finalQ.gif;
     questionScreen.classList.add('hidden')
     finalScreen.classList.remove('hidden')
 }

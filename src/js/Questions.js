@@ -22,7 +22,7 @@ export const questions = [
     },
     {
         id: 4,
-        text: "Супер, я в полной боевой готовности к встрече с тобой!",
+        text: "Я уже получил твое сообщение. До скорой встречи ❤️",
         gif: './images/mochi-final-screen.gif'
     }
 ];
