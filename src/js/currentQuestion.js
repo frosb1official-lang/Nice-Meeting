@@ -8,7 +8,12 @@ const questionGif = document.getElementById('questionGif')
 const btnsWrapper = document.querySelector('.btns-wrapper')
 const datetimeWrapper = document.getElementById('datetimeWrapper')
 const submitDateBtn = document.getElementById('submitDateBtn')
+const dateInput = document.getElementById('dateInput')
+const timeInput = document.getElementById('timeInput')
 const containerWrapper = questionScreen.querySelector('.container-wrapper')
+
+dateInput.addEventListener('click', () => dateInput.showPicker())
+timeInput.addEventListener('click', () => timeInput.showPicker())
 
 let currentQuestion = 0;
 

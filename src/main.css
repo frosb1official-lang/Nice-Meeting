@@ -225,6 +225,19 @@ body::after {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.8);
     color: var(--color-brown-dark);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input-styled::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
 }
 
 .btn-submit {
