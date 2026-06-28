@@ -62,9 +62,24 @@ yesBtn.addEventListener('click', () => {
 })
 
 submitDateBtn.addEventListener('click', () => {
+    const missingDate = !dateInput.value;
+    const missingTime = !timeInput.value;
+
+    if (missingDate || missingTime) {
+        if (missingDate) shakeInput(dateInput);
+        if (missingTime) shakeInput(timeInput);
+        return;
+    }
+
     currentQuestion++;
     renderQuestion();
 })
+
+function shakeInput(el) {
+    el.classList.remove('shake');
+    el.offsetHeight;
+    el.classList.add('shake');
+}
 
 function showFinalScreen() {
     const finalQ = questions[questions.length - 1];
