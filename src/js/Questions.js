@@ -4,7 +4,8 @@ export const questions = [
         text: "У меня есть отличная идея...",
         btnYes: "Какая?",
         btnNo: "Не интересно",
-        gif: './images/peachcat-cat.gif'
+        gif: './images/peachcat-cat.gif',
+        gifOffsetX: -30
     },
     {
         id: 2,

@@ -8,6 +8,7 @@ const questionGif = document.getElementById('questionGif')
 const btnsWrapper = document.querySelector('.btns-wrapper')
 const datetimeWrapper = document.getElementById('datetimeWrapper')
 const submitDateBtn = document.getElementById('submitDateBtn')
+const containerWrapper = questionScreen.querySelector('.container-wrapper')
 
 let currentQuestion = 0;
 
@@ -15,6 +16,12 @@ function resetNoBtn() {
     noBtn.style.left = '';
     noBtn.style.top = '';
     noBtn.style.position = '';
+}
+
+function replayCardAnimation() {
+    containerWrapper.style.animation = 'none';
+    containerWrapper.offsetHeight; // force reflow
+    containerWrapper.style.animation = '';
 }
 
 function renderQuestion() {
@@ -25,11 +32,13 @@ function renderQuestion() {
     }
 
     resetNoBtn()
+    replayCardAnimation()
 
     const q = questions[currentQuestion];
     
     qText.textContent = q.text;
     questionGif.src = q.gif
+    questionGif.style.transform = q.gifOffsetX ? `translateX(${q.gifOffsetX}px)` : '';
 
     if (q.type === 'datetime') {
         btnsWrapper.classList.add('hidden');
