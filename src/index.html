@@ -57,8 +57,16 @@
                             <input class="btn input-styled" type="date" id="dateInput" />
                         </div>
                         <div class="input-block">
-                            <label class="input-label" for="timeInput">Время</label>
-                            <input class="btn input-styled" type="time" id="timeInput" />
+                            <label class="input-label" for="timeHour">Время</label>
+                            <div class="time-selects">
+                                <select class="btn input-styled time-select" id="timeHour">
+                                    <option value="" disabled selected>ЧЧ</option>
+                                </select>
+                                <span class="time-colon">:</span>
+                                <select class="btn input-styled time-select" id="timeMin">
+                                    <option value="" disabled selected>ММ</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <button class="btn btn-submit" type="button" id="submitDateBtn">

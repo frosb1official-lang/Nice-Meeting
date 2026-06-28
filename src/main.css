@@ -246,6 +246,24 @@ body::after {
     width: 200px;
 }
 
+.time-selects {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.time-select {
+    width: 70px;
+    height: 46px;
+    padding: 0 4px;
+}
+
+.time-colon {
+    font-family: var(--font-main);
+    font-size: 24px;
+    color: var(--color-brown);
+}
+
 .shake {
     animation: shake 0.4s ease;
     border-color: #e05555 !important;

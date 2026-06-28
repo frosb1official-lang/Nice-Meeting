@@ -9,11 +9,24 @@ const btnsWrapper = document.querySelector('.btns-wrapper')
 const datetimeWrapper = document.getElementById('datetimeWrapper')
 const submitDateBtn = document.getElementById('submitDateBtn')
 const dateInput = document.getElementById('dateInput')
-const timeInput = document.getElementById('timeInput')
+const timeHour = document.getElementById('timeHour')
+const timeMin = document.getElementById('timeMin')
 const containerWrapper = questionScreen.querySelector('.container-wrapper')
 
 dateInput.addEventListener('click', () => dateInput.showPicker())
-timeInput.addEventListener('click', () => timeInput.showPicker())
+
+for (let h = 0; h < 24; h++) {
+    const opt = document.createElement('option');
+    opt.value = h;
+    opt.textContent = String(h).padStart(2, '0');
+    timeHour.appendChild(opt);
+}
+for (let m = 0; m < 60; m += 5) {
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = String(m).padStart(2, '0');
+    timeMin.appendChild(opt);
+}
 
 let currentQuestion = 0;
 
@@ -63,11 +76,13 @@ yesBtn.addEventListener('click', () => {
 
 submitDateBtn.addEventListener('click', () => {
     const missingDate = !dateInput.value;
-    const missingTime = !timeInput.value;
+    const missingHour = !timeHour.value;
+    const missingMin = !timeMin.value;
 
-    if (missingDate || missingTime) {
+    if (missingDate || missingHour || missingMin) {
         if (missingDate) shakeInput(dateInput);
-        if (missingTime) shakeInput(timeInput);
+        if (missingHour) shakeInput(timeHour);
+        if (missingMin) shakeInput(timeMin);
         return;
     }
 
