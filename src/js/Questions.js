@@ -15,9 +15,8 @@ export const questions = [
     },
     {
         id: 3,
-        text: "Так что... ты согласна(-ен) сходить со мной на свидание?",
-        btnYes: "Да, очень хочу!",
-        btnNo: "В другой раз",
+        type: 'datetime',
+        text: "Выбери дату, когда ты свободен(-на) погулять со мной?",
         gif: './images/mochi-mochimochi.gif'
     },
     {

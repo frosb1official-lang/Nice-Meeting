@@ -5,6 +5,9 @@ const qText = document.getElementById('qText')
 const yesBtn = document.getElementById('yesBtn')
 const noBtn = document.getElementById('noBtn')
 const questionGif = document.getElementById('questionGif')
+const btnsWrapper = document.querySelector('.btns-wrapper')
+const datetimeWrapper = document.getElementById('datetimeWrapper')
+const submitDateBtn = document.getElementById('submitDateBtn')
 
 let currentQuestion = 0;
 
@@ -26,12 +29,25 @@ function renderQuestion() {
     const q = questions[currentQuestion];
     
     qText.textContent = q.text;
-    yesBtn.textContent = q.btnYes;
-    noBtn.textContent = q.btnNo;
     questionGif.src = q.gif
+
+    if (q.type === 'datetime') {
+        btnsWrapper.classList.add('hidden');
+        datetimeWrapper.classList.remove('hidden');
+    } else {
+        btnsWrapper.classList.remove('hidden');
+        datetimeWrapper.classList.add('hidden');
+        yesBtn.textContent = q.btnYes;
+        noBtn.textContent = q.btnNo;
+    }
 }
 
 yesBtn.addEventListener('click', () => {
+    currentQuestion++;
+    renderQuestion();
+})
+
+submitDateBtn.addEventListener('click', () => {
     currentQuestion++;
     renderQuestion();
 })

@@ -36,6 +36,9 @@ body {
     height: 75vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
     border: 2px solid var(--color-pink-dark);
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(242, 99, 137, 0.18);
@@ -49,11 +52,11 @@ body {
 }
 
 .img-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 0;
 }
 
 .text-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 0;
 }
 
 .btns-wrapper {
@@ -70,7 +73,6 @@ body {
     font-size: 40px;
     text-align: center;
     color: var(--color-pink);
-    height: 150px;
 }
 
 .btn {
@@ -112,6 +114,45 @@ body {
 .btn:hover {
     background-color: var(--color-pink-light);
     color: var(--color-pink);
+}
+
+.datetime-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.datetime-inputs {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-label {
+    font-family: var(--font-main);
+    font-size: 20px;
+    color: var(--color-pink);
+}
+
+.input-styled {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    font-family: var(--font-btn);
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-submit {
+    margin-top: 10px;
+    width: 220px;
 }
 
 .hidden {
