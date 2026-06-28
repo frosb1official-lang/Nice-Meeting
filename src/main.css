@@ -188,6 +188,8 @@ body::after {
     background: linear-gradient(135deg, var(--color-peach) 0%, var(--color-pink-soft) 100%);
     color: var(--color-brown-dark);
     border-color: var(--color-pink-soft);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--color-pink-deep);
 }
 
 /* ===== Datetime picker ===== */
